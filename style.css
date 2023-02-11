@@ -23,6 +23,7 @@
     --fs-300: 0.75rem;
     --fs-400: 0.938rem;
     --fs-800: 1.75rem;
+    --fs-900: 2.25rem;
 
     /* font weight */
     --fw-regular: 400;
@@ -93,10 +94,23 @@ body {
 }
 
 .card {
+    display: grid;
     background-color: var(--clr-card-bg);
     border-radius: 0.5rem;
-    max-width: 20.5rem;
+    /* max-width: 20.5rem; */
+    margin: 0 1.5rem;
     overflow: hidden;
+    grid-template-areas:
+        "image"
+        "content";
+}
+
+.card__image {
+    grid-area: image;
+}
+
+.card__content {
+    grid-area: content;
 }
 
 .card__body {
@@ -140,4 +154,47 @@ body {
     font-size: var(--fs-300);
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+
+@media (min-width: 425px) {
+    .card {
+        max-width: 28rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "content image";
+    }
+}
+
+@media (min-width: 1170px) {
+
+    body {
+        text-align: left;
+    }
+
+    .card {
+        max-width: 69.375rem;
+
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "content image";
+    }
+
+    .card__title {
+        font-size: var(--fs-900);
+    }
+
+    .card__body {
+        gap: 1.8rem;
+        padding: 4.5rem 7rem 4.1rem 4.5rem;
+    }
+
+    .card__stats {
+        flex-direction: row;
+        padding: 0 4.5rem;
+    }
 }
