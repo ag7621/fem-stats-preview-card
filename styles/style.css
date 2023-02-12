@@ -36,14 +36,6 @@ body {
     left: 0;
 }
 
-/* .card__image-overlay {
-    position: absolute;
-    background-color: var(--clr-overlay);
-    height: 100%;
-    width: 100%;
-    top: 0;
-} */
-
 .card__content {
     display: grid;
     gap: 2rem;
