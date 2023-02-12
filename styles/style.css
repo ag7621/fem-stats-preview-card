@@ -138,7 +138,7 @@ a {
     .card__stats {
         flex-direction: row;
         justify-content: flex-start;
-        gap: 15%;
+        gap: 16.5%;
     }
 }
 
@@ -150,7 +150,7 @@ a {
 
     .card__content {
         gap: 2rem;
-        margin: 12.5% 12.5% 10.8%;
+        margin: 12.5% 20% 10.8% 12.5%;
     }
 
     .card__title {
