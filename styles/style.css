@@ -26,13 +26,23 @@ body {
     grid-area: image;
 }
 
-.card__image-overlay {
+.card__image::after {
+    content: '';
     position: absolute;
     background-color: var(--clr-overlay);
     height: 100%;
     width: 100%;
     top: 0;
+    left: 0;
 }
+
+/* .card__image-overlay {
+    position: absolute;
+    background-color: var(--clr-overlay);
+    height: 100%;
+    width: 100%;
+    top: 0;
+} */
 
 .card__content {
     display: grid;
